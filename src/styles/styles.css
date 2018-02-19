@@ -1,0 +1,36 @@
+.display-screen {
+  height: 50px;
+  background: red;
+}
+
+.display-text {
+  float: right;
+}
+
+.button-container {
+  background: gray;
+  overflow-y: auto;
+}
+
+.button-container > button {
+  display: inline-block;
+  border: 0;
+  border-radius: 24px;
+  width: 80px;
+  height: 80px;
+  float: left;
+  background: lightgray;
+  margin: 5px;
+}
+
+button:focus {
+  outline-style: none;
+}
+
+.calc-container {
+  width: 360px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
