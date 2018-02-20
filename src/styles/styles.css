@@ -30,6 +30,16 @@ body {
   overflow-y: auto;
 }
 
+#numbers {
+  display: inline-block;
+  width: 270px;
+}
+
+#vert-function {
+  display: inline-block;
+  width: 90px;
+}
+
 button {
   display: inline-block;
   border: 2px solid #0099cc;

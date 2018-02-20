@@ -48,7 +48,7 @@ class Calculator extends Component {
             handleClick={this.handleButtonClick.bind(this)}
           />
         </div>
-        <div className="button-container">
+        <div className="button-container" id="numbers">
           {a.map(i => (
             <Button
               key={i}
@@ -56,6 +56,18 @@ class Calculator extends Component {
               handleClick={this.handleButtonClick.bind(this)}
             />
           ))}
+        </div>
+        <div className="button-container" id="vert-function">
+          <Button
+            key="mult"
+            value="+"
+            handleClick={this.handleButtonClick.bind(this)}
+          />
+          <Button
+            key="mult"
+            value="-"
+            handleClick={this.handleButtonClick.bind(this)}
+          />
           <Button
             key="="
             value="="
