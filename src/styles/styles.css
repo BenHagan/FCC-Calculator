@@ -1,6 +1,12 @@
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
 .display-screen {
-  height: 50px;
-  background: red;
+  height: 80px;
+  background: transparent;
+  border: 2px solid #0099cc;
+  border-radius: 24px;
 }
 
 .display-text {
@@ -8,19 +14,23 @@
 }
 
 .button-container {
-  background: gray;
   overflow-y: auto;
 }
 
-.button-container > button {
+button {
   display: inline-block;
-  border: 0;
+  border: 2px solid #0099cc;
   border-radius: 24px;
   width: 80px;
   height: 80px;
   float: left;
-  background: lightgray;
+  background: transparent;
   margin: 5px;
+}
+
+button:hover {
+  background-color: #008cba;
+  color: white;
 }
 
 button:focus {
