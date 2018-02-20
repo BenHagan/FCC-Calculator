@@ -16,11 +16,10 @@ export function updateExpression(value) {
   };
 }
 
-export function updateInput(value, currentInput) {
+export function updateInput(value) {
   if (value == '*' || value == '/') {
     return {
       type: FUNC_INPUT,
-      currentInput,
       payload: value
     };
   }

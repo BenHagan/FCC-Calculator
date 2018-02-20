@@ -15,7 +15,6 @@ export default function(state = '', action) {
     case CLEAR_INPUT:
       return state.substring(0, state.lastIndexOf(action.payload));
     case FUNC_INPUT:
-      return action.currentInput + action.payload;
     case UPDATE_INPUT:
       return `${state}${action.payload}`;
     default:
