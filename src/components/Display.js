@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 const Display = props => {
   return (
     <div className="display-screen">
-      <div className="display-text">{props.currentInput}</div>
-      <br />
-      <div className="display-text">{props.expression}</div>
+      <div className="output">
+        <div className="display-text">{props.currentInput}</div>
+        <div className="expression-text">{props.expression}</div>
+      </div>
     </div>
   );
 };
