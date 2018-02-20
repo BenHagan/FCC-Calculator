@@ -9,6 +9,8 @@ import {
 
 import math from 'mathjs';
 
+const funcs = '*/-+';
+
 export function updateExpression(value) {
   return {
     type: UPDATE_EXPRESSION,
@@ -17,7 +19,7 @@ export function updateExpression(value) {
 }
 
 export function updateInput(value) {
-  if (value == '*' || value == '/') {
+  if (funcs.indexOf(value) !== -1) {
     return {
       type: FUNC_INPUT,
       payload: value

@@ -59,12 +59,12 @@ class Calculator extends Component {
         </div>
         <div className="button-container" id="vert-function">
           <Button
-            key="mult"
+            key="add"
             value="+"
             handleClick={this.handleButtonClick.bind(this)}
           />
           <Button
-            key="mult"
+            key="sub"
             value="-"
             handleClick={this.handleButtonClick.bind(this)}
           />
