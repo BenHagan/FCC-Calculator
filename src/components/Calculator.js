@@ -76,6 +76,19 @@ class Calculator extends Component {
             }}
           />
         </div>
+        <div className="button-container" id="bottom-row">
+          <Button
+            key="0"
+            value="0"
+            className="zero-button"
+            handleClick={this.handleButtonClick.bind(this)}
+          />
+          <Button
+            key="decimal"
+            value="."
+            handleClick={this.handleButtonClick.bind(this)}
+          />
+        </div>
       </div>
     );
   }
