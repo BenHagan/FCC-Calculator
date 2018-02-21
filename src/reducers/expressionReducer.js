@@ -9,7 +9,8 @@ import {
 export default function(state = '', action) {
   switch (action.type) {
     case EVALUATE_EXPRESSION:
-      return action.expression + '=' + action.payload;
+      // handle case where '=' is clicked first with no input
+      return action.payload ? `${action.expression}=${action.payload}` : state;
     case CLEAR_ALL:
       return '';
     case CLEAR_INPUT:

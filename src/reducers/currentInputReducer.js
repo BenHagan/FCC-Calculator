@@ -17,7 +17,8 @@ export default function(state = '', action) {
     case CLEAR_INPUT:
       return '';
     case EVALUATE_EXPRESSION:
-      return action.payload;
+      // handle case where '=' is clicked first with no input
+      return action.payload ? action.payload : state;
     default:
       return state;
   }
