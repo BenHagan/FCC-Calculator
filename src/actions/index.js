@@ -4,12 +4,20 @@ import {
   CLEAR_INPUT,
   CLEAR_ALL,
   FUNC_INPUT,
-  EVALUATE_EXPRESSION
+  EVALUATE_EXPRESSION,
+  DIRECT_UPDATE
 } from './types';
 
 import math from 'mathjs';
 
 const funcs = '*/-+';
+
+export function directUpdate(value) {
+  return {
+    type: DIRECT_UPDATE,
+    payload: value
+  };
+}
 
 export function updateExpression(value) {
   return {

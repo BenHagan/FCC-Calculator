@@ -9,7 +9,16 @@ const a = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 class Calculator extends Component {
   handleButtonClick(value) {
-    this.props.updateInput(value);
+    if (/^0|[-/+=]/g.test(this.props.currentInput)) {
+      if (value !== '0') {
+        this.props.updateInput(value);
+      }
+    } else {
+      this.props.expression.lastIndexOf('=') !== -1 &&
+      /[^*-/+=]|[.]/g.test(value)
+        ? this.props.directUpdate(value)
+        : this.props.updateInput(value);
+    }
   }
 
   handleCeClick() {

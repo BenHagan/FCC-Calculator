@@ -4,3 +4,4 @@ export const CLEAR_INPUT = 'clear_input';
 export const CLEAR_ALL = 'clear_all';
 export const FUNC_INPUT = 'func_input';
 export const EVALUATE_EXPRESSION = 'evaluate_expression';
+export const DIRECT_UPDATE = 'DIRECT_UPDATE';
