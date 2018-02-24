@@ -5,7 +5,9 @@ const Display = props => {
   return (
     <div className="display-screen">
       <div className="output">
-        <div className="display-text">{props.currentInput}</div>
+        <div id="display" className="display-text">
+          {props.currentInput}
+        </div>
         <div className="expression-text">{props.expression}</div>
       </div>
     </div>

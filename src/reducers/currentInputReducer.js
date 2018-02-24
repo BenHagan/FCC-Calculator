@@ -17,6 +17,7 @@ export default function(state = '0', action) {
       const re = /[0-9.]+/;
       return re
         .exec(state + action.payload)[0]
+        .replace(/(?<=[.].*)[.]/g, '')
         .replace(REGEX_LEADING_ZERO, '')
         .replace(/^[.]/g, '0.');
     case CLEAR_ALL:

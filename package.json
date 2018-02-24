@@ -5,6 +5,7 @@
   "homepage": "http://benhagan.github.io/FCC-Calculator",
   "dependencies": {
     "mathjs": "^3.20.2",
+    "number-to-words": "^1.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",

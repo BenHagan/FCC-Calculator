@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import numberToWords from 'number-to-words';
 
 import Button from './Button';
 import Display from './Display';
@@ -36,6 +37,7 @@ class Calculator extends Component {
         <div className="button-container">
           <Button
             key="ac"
+            id="clear"
             value="ac"
             handleClick={() => {
               this.props.clearAll();
@@ -49,11 +51,13 @@ class Calculator extends Component {
           <Button
             key="div"
             value="/"
+            id="divide"
             handleClick={this.handleButtonClick.bind(this)}
           />
           <Button
             key="mult"
             value="*"
+            id="multiply"
             handleClick={this.handleButtonClick.bind(this)}
           />
         </div>
@@ -61,6 +65,7 @@ class Calculator extends Component {
           {a.map(i => (
             <Button
               key={i}
+              id={numberToWords.toWords(i)}
               value={i}
               handleClick={this.handleButtonClick.bind(this)}
             />
@@ -69,16 +74,19 @@ class Calculator extends Component {
         <div className="button-container" id="vert-function">
           <Button
             key="add"
+            id="add"
             value="+"
             handleClick={this.handleButtonClick.bind(this)}
           />
           <Button
             key="sub"
             value="-"
+            id="subtract"
             handleClick={this.handleButtonClick.bind(this)}
           />
           <Button
-            key="="
+            key="equals"
+            id="equals"
             value="="
             handleClick={() => {
               this.props.evaluateExpression(this.props.expression);
@@ -89,11 +97,13 @@ class Calculator extends Component {
           <Button
             key="0"
             value="0"
+            id="zero"
             className="zero-button"
             handleClick={this.handleButtonClick.bind(this)}
           />
           <Button
             key="decimal"
+            id="decimal"
             value="."
             handleClick={this.handleButtonClick.bind(this)}
           />

@@ -25,13 +25,19 @@ export default function(state = '0', action) {
     case DIRECT_UPDATE:
       return action.payload.replace(/^[.]/g, '0.');
     case FUNC_INPUT:
+      debugger;
       return state.lastIndexOf('=') !== -1
         ? `${state.substring(state.lastIndexOf('=') + 1)}${action.payload}`
-        : `${state}${action.payload}`.replace(REGEX_LEADING_ZERO, '');
+        : `${state}${action.payload}`
+            .replace(REGEX_LEADING_ZERO, '')
+            .replace(/[-+/*][-+/*]+/g, action.payload);
     case UPDATE_INPUT:
+      // regex eliminating repeating '.'
       //  regex removing leading zeros, except on sub 1 decimal numbers
       // chained regex turning '.x' into '0.x'
+      debugger;
       return `${state}${action.payload}`
+        .replace(/(?<=[.][^-+/*]*)[.]/g, '')
         .replace(REGEX_LEADING_ZERO, '')
         .replace(/(?<![0-9])[.]/g, '0.');
 
